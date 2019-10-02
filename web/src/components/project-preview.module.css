@@ -2,16 +2,17 @@
   display: block;
   color: inherit;
   text-decoration: none;
+
 }
 
 .title {
-  composes: responsiveTitle1 from './typography.module.css';
+  composes: responsiveTitle from './typography.module.css';
 }
 
 .leadMediaThumb {
   position: relative;
-  padding-bottom: 66.666%;
-  background: #eee;
+  padding-bottom: 100%;
+
 
   @nest & img {
     position: absolute;
@@ -20,23 +21,125 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+
   }
 }
+.titlediv{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
 
+
+
+      @media (hover: hover) {
+
+    @nest .root:hover & {
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.0);
+
+    }
+  }
+
+}
 .title {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 2em;
+    opacity: 1;
+    transition: opacity 0.3s linear;
+
   @media (hover: hover) {
     @nest .root:hover & {
-      text-decoration: underline;
+    text-decoration: none;
+     opacity: 0;
+
     }
   }
 }
 
 .excerpt {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    color:transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+
+-webkit-animation: AnimationName 50s linear infinite;
+-moz-animation: AnimationName 50s linear infinite;
+animation: AnimationName 50s linear infinite;
+
+
+background: linear-gradient(129deg, rgba(95,255,98,0.4), transparent, rgba(14,247,255,0.5), rgba(255,14,197,0.3), rgba(153,14,255,0.4), transparent, rgba(255,14,197,0.5), rgba(95,255,98,0.3), rgba(243,255,14,0.4), transparent);
+background-size: 2000% 2000%;
+
   @nest & p {
     margin: 0.5em 0;
+    line-height: 1.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.6em;
+    margin: 20px;
+    letter-spacing: 4px;
+
+  }
+
+  .overlay{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #000000;
+    position: absolute;
+    top:0px;
   }
 
   @nest & strong {
     font-weight: 600;
   }
+
+    @media (hover: hover) {
+    @nest .root:hover & {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:#ffffff;
+    font-weight: 600;
+    opacity: 1;
+
+
+    }
+  }
+}
+
+
+
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 2%}
+    50%{background-position:100% 99%}
+    100%{background-position:0% 2%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 2%}
+    50%{background-position:100% 99%}
+    100%{background-position:0% 2%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 2%}
+    50%{background-position:100% 99%}
+    100%{background-position:0% 2%}
 }

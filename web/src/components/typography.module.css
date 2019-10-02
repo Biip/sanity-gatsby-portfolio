@@ -6,17 +6,17 @@
   /* Font sizes */
   --font-micro-size: calc(8 / var(--base-unit) * 1rem);
   --font-micro-line-height: 1;
-  --font-small-size: calc(14 / var(--base-unit) * 1rem);
+  --font-small-size: calc(12 / var(--base-unit) * 1rem);
   --font-small-line-height: calc(18 / 14);
   --font-base-size: calc(var(--base-unit) / 16 * 100%);
   --font-base-line-height: calc(22 / var(--base-unit));
-  --font-large-size: calc(19 / var(--base-unit) * 1rem);
+  --font-large-size: calc(17 / var(--base-unit) * 1rem);
   --font-large-line-height: calc(24 / 19);
-  --font-title3-size: calc(24 / var(--base-unit) * 1rem);
+  --font-title3-size: calc(22 / var(--base-unit) * 1rem);
   --font-title3-line-height: calc(28 / 24);
-  --font-title2-size: calc(32 / var(--base-unit) * 1rem);
+  --font-title2-size: calc(30 / var(--base-unit) * 1rem);
   --font-title2-line-height: calc(36 / 32);
-  --font-title1-size: calc(44 / var(--base-unit) * 1rem);
+  --font-title1-size: calc(42 / var(--base-unit) * 1rem);
   --font-title1-line-height: calc(56 / 44);
 }
 
@@ -69,6 +69,7 @@
  */
 
 .paragraph {
+  font-weight: 80;
   font-size: var(--font-base-size);
   line-height: var(--font-base-line-height);
   margin: 0.5rem 0 1rem 0;
@@ -89,7 +90,7 @@
 }
 
 .responsiveTitle1 {
-  font-weight: 900;
+  font-weight: 240;
   font-size: var(--font-title3-size);
   line-height: var(--font-title3-line-height);
   margin: 1rem 0 2rem;
@@ -106,7 +107,7 @@
 }
 
 .responsiveTitle2 {
-  font-weight: 900;
+  font-weight: 240;
   font-size: var(--font-large-size);
   line-height: var(--font-large-line-height);
   margin: 1.5rem 0 0.5rem;
@@ -124,18 +125,22 @@
 
 .responsiveTitle3 {
   font-weight: 900;
-  font-size: var(--font-large-size);
+  color:#ffffff;
+  font-size: 10em;
   line-height: var(--font-large-line-height);
-  margin: 1rem 0 0.5rem;
+  margin: 0.1rem 0 0.5rem;
 
   @media (--media-min-small) {
-    font-size: var(--font-large-size);
+  font-size: 10em;
     line-height: var(--font-large-line-height);
   }
 
   @media (--media-min-medium) {
-    font-size: var(--font-title3-size);
+  font-size: 2em;
     line-height: var(--font-title3-line-height);
+    text-transform: lowercase;
+      letter-spacing: 12px;
+
   }
 }
 
