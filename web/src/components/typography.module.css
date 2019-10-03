@@ -2,6 +2,7 @@
 
 :root {
   --base-unit: 17;
+  --font-family-sans: 'Montserrat', sans-serif;
 
   /* Font sizes */
   --font-micro-size: calc(8 / var(--base-unit) * 1rem);
@@ -75,13 +76,17 @@
   margin: 0.5rem 0 1rem 0;
 
   @media (--media-min-small) {
-    font-size: var(--font-base-size);
-    line-height: var(--font-base-line-height);
+  font-weight: 60;
+  font-size: var(--font-base-size);
+  line-height: var(--font-base-line-height);
+  margin: 0.5rem 0 1rem 0;
   }
 
   @media (--media-min-medium) {
-    font-size: var(--font-large-size);
-    line-height: var(--font-large-line-height);
+  font-weight: 80;
+  font-size: var(--font-base-size);
+  line-height: var(--font-base-line-height);
+  margin: 0.5rem 0 1rem 0;
   }
 }
 
@@ -107,7 +112,7 @@
 }
 
 .responsiveTitle2 {
-  font-weight: 240;
+  font-weight: 40;
   font-size: var(--font-large-size);
   line-height: var(--font-large-line-height);
   margin: 1.5rem 0 0.5rem;
@@ -126,20 +131,22 @@
 .responsiveTitle3 {
   font-weight: 900;
   color:#ffffff;
-  font-size: 10em;
+  font-size: 14em;
   line-height: var(--font-large-line-height);
   margin: 0.1rem 0 0.5rem;
 
   @media (--media-min-small) {
-  font-size: 10em;
-    line-height: var(--font-large-line-height);
+  font-size: 1.6em;
+  font-weight: 700;
+    text-transform: uppercase;
+      letter-spacing: 15px;
   }
 
   @media (--media-min-medium) {
-  font-size: 2em;
-    line-height: var(--font-title3-line-height);
-    text-transform: lowercase;
-      letter-spacing: 12px;
+  font-size: 2.6em;
+  font-weight: 900;
+    text-transform: uppercase;
+      letter-spacing: 19px;
 
   }
 }
